@@ -1,0 +1,149 @@
+.about {
+  padding-block: var(--section-padding-y);
+  background: var(--bg-elevated);
+}
+
+.about .container {
+  width: 100%;
+}
+
+.about__grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: var(--space-3xl);
+  align-items: start;
+}
+
+.about__visual {
+  position: relative;
+}
+
+.about__frame {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  max-height: 85vh;
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+.about__frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(11, 11, 11, 0.4) 0%,
+    transparent 40%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.about__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  will-change: transform;
+}
+
+.about__label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: var(--space-2xs);
+}
+
+.about__title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.about__accent-line {
+  display: block;
+  width: 64px;
+  height: 2px;
+  margin-top: var(--space-sm);
+  background: linear-gradient(90deg, var(--accent), transparent);
+  transform-origin: left center;
+}
+
+.about__text {
+  padding-top: var(--space-2xs);
+}
+
+.about__content {
+  padding-top: var(--space-sm);
+}
+
+.about__lead {
+  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin-bottom: var(--space-md);
+}
+
+.about__body {
+  font-size: clamp(0.9375rem, 1.2vw, 1rem);
+  line-height: 1.75;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.about__tools {
+  font-size: 0.8125rem;
+  letter-spacing: 0.04em;
+  color: var(--accent);
+  opacity: 0.9;
+  margin-bottom: var(--space-lg);
+}
+
+.about__banner {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .about__visual {
+    order: -1;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .about__frame {
+    max-height: none;
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@media (max-width: 640px) {
+  .about__title {
+    font-size: clamp(1.5rem, 6vw, 2.25rem);
+  }
+
+  .about__visual {
+    max-width: 100%;
+  }
+
+  .about__lead,
+  .about__body {
+    font-size: 0.9375rem;
+  }
+
+  .about__banner {
+    max-width: 100%;
+  }
+}

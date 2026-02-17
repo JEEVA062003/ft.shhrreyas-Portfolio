@@ -1,0 +1,43 @@
+:root {
+  /* Colors - dark luxury */
+  --bg-primary: #0b0b0b;
+  --bg-elevated: #111111;
+  --bg-card: #141414;
+  --text-primary: #f5f5f5;
+  --text-secondary: #a3a3a3;
+  --text-muted: #737373;
+  --accent: #c9a962;
+  --accent-dim: rgba(201, 169, 98, 0.15);
+  --border: rgba(255, 255, 255, 0.06);
+  --overlay: rgba(11, 11, 11, 0.6);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Spacing - luxury scale */
+  --space-3xs: 0.25rem;
+  --space-2xs: 0.5rem;
+  --space-xs: 1rem;
+  --space-sm: 1.5rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+  --space-4xl: 12rem;
+
+  /* Layout */
+  --container-max: 1400px;
+  --container-narrow: 720px;
+  --header-height: 5.5rem;
+  --section-padding-y: clamp(3rem, 8vw, 8rem);
+  --section-padding-x: clamp(1rem, 4vw, 4rem);
+
+  /* Transitions */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --duration-s: 0.3s;
+  --duration-m: 0.5s;
+  --duration-l: 0.8s;
+}
