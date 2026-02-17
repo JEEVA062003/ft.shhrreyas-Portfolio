@@ -56,6 +56,7 @@
 .showreel__aspect {
   aspect-ratio: 16 / 9;
   position: relative;
+  width: 100%;
 }
 
 .showreel__video {
@@ -64,6 +65,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .showreel__placeholder {

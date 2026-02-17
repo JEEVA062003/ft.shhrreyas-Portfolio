@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Showreel from './components/Showreel/Showreel';
@@ -7,6 +8,10 @@ import About from './components/About/About';
 import Services from './components/Services/Services';
 import Contact from './components/Contact/Contact';
 import CustomCursor from './components/CustomCursor/CustomCursor';
+import Photography from './pages/Photography';
+import Freelancing from './pages/Freelancing';
+import Cinematic from './pages/Cinematic';
+import Reel from './pages/Reel';
 
 const SECTION_IDS = ['hero', 'showreel', 'works', 'about', 'services', 'contact'];
 const HERO_DURATION_MS = 3000;
@@ -87,18 +92,29 @@ function App() {
   }, []);
 
   return (
-    <>
-      <CustomCursor />
-      <Header />
-      <main>
-        <Hero />
-        <Showreel />
-        <Works />
-        <About />
-        <Services />
-        <Contact />
-      </main>
-    </>
+    <Routes>
+      <Route path="/photography" element={<><CustomCursor /><Photography /></>} />
+      <Route path="/freelancing" element={<><CustomCursor /><Freelancing /></>} />
+      <Route path="/cinematic" element={<><CustomCursor /><Cinematic /></>} />
+      <Route path="/reel-videos" element={<><CustomCursor /><Reel /></>} />
+      <Route
+        path="/*"
+        element={
+          <>
+            <CustomCursor />
+            <Header />
+            <main>
+              <Hero />
+              <Showreel />
+              <Works />
+              <About />
+              <Services />
+              <Contact />
+            </main>
+          </>
+        }
+      />
+    </Routes>
   );
 }
 

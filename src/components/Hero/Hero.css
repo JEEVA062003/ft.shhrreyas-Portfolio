@@ -20,8 +20,8 @@
 .hero__bg-image {
   position: absolute;
   inset: -5%;
-  background: url('/herobg.png') center 68% / cover no-repeat;
-  filter: brightness(0.3) contrast(1) saturate(0.5);
+  background: url('/herobg.JPG') center 48% / cover no-repeat;
+  filter: brightness(0.5) contrast(1.05) saturate(0.6);
   opacity: 1;
 }
 
@@ -471,11 +471,6 @@
 }
 
 @media (max-width: 768px) {
-  .hero__bg-image {
-    background-image: none;
-    opacity: 0;
-  }
-
   .hero__content {
     gap: var(--space-md);
     padding-inline: var(--section-padding-x);

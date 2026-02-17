@@ -23,3 +23,6 @@ Thumbs.db
 # Logs
 *.log
 npm-debug.log*
+
+# Large media (over GitHub 50MB limit; keep locally, host elsewhere if needed)
+public/Reel/quality_restoration_20251116141328959.MP4

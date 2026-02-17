@@ -1,15 +1,14 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Works.css';
 
 const projects = [
-  { id: 1, title: 'Brand Film', category: 'Commercial', thumbnail: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=800&q=80', videoUrl: null },
-  { id: 2, title: 'Documentary', category: 'Film', thumbnail: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80', videoUrl: null },
-  { id: 3, title: 'Music Video', category: 'Music', thumbnail: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80', videoUrl: null },
-  { id: 4, title: 'Fashion Editorial', category: 'Fashion', thumbnail: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&q=80', videoUrl: null },
-  { id: 5, title: 'Short Film', category: 'Narrative', thumbnail: 'https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=800&q=80', videoUrl: null },
-  { id: 6, title: 'Event Recap', category: 'Events', thumbnail: 'https://images.unsplash.com/photo-1545128485-c400e7702796?w=800&q=80', videoUrl: null },
+  { id: 1, title: 'Photography', slug: 'photography', thumbnail: 'https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=800&q=80' },
+  { id: 2, title: 'Freelancing', slug: 'freelancing', thumbnail: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80' },
+  { id: 3, title: 'Cinematic', slug: 'cinematic', thumbnail: 'https://images.unsplash.com/photo-1485846234645-a62644f84728?w=800&q=80' },
+  { id: 4, title: 'Reel Videos', slug: 'reel-videos', thumbnail: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80' },
 ];
 
 export default function Works() {
@@ -54,7 +53,7 @@ export default function Works() {
           scrub: 0.4,
           onUpdate: (self) => {
             inners.forEach((el, i) => {
-              const row = Math.floor(i / 3);
+              const row = Math.floor(i / 2);
               const y = (1 - self.progress) * (12 + row * 8);
               el.style.transform = `translate3d(0, ${y}px, 0)`;
             });
@@ -74,20 +73,54 @@ export default function Works() {
           <span ref={lineRef} className="works__accent-line" />
         </div>
         <div ref={gridRef} className="works__grid">
-          {projects.map((project) => (
-            <a key={project.id} href="#" className="works__card" data-cursor-hover>
-              <div className="works__card-media">
-                <div className="works__card-media-inner">
-                  <img src={project.thumbnail} alt="" loading="lazy" className="works__card-img" />
+          {projects.map((project) => {
+            const cardContent = (
+              <>
+                <div className="works__card-media">
+                  <div className="works__card-media-inner">
+                    <img src={project.thumbnail} alt="" loading="lazy" className="works__card-img" />
+                  </div>
+                  <div className="works__card-overlay" />
                 </div>
-                <div className="works__card-overlay" />
-              </div>
-              <div className="works__card-info">
-                <span className="works__card-category">{project.category}</span>
-                <h3 className="works__card-title">{project.title}</h3>
-              </div>
-            </a>
-          ))}
+                <div className="works__card-info">
+                  <h3 className="works__card-title">{project.title}</h3>
+                </div>
+              </>
+            );
+            if (project.slug === 'photography') {
+              return (
+                <Link key={project.id} to="/photography" className="works__card" data-cursor-hover>
+                  {cardContent}
+                </Link>
+              );
+            }
+            if (project.slug === 'freelancing') {
+              return (
+                <Link key={project.id} to="/freelancing" className="works__card" data-cursor-hover>
+                  {cardContent}
+                </Link>
+              );
+            }
+            if (project.slug === 'cinematic') {
+              return (
+                <Link key={project.id} to="/cinematic" className="works__card" data-cursor-hover>
+                  {cardContent}
+                </Link>
+              );
+            }
+            if (project.slug === 'reel-videos') {
+              return (
+                <Link key={project.id} to="/reel-videos" className="works__card" data-cursor-hover>
+                  {cardContent}
+                </Link>
+              );
+            }
+            return (
+              <a key={project.id} href="#" className="works__card" data-cursor-hover>
+                {cardContent}
+              </a>
+            );
+          })}
         </div>
       </div>
     </section>

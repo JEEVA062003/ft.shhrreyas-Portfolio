@@ -77,11 +77,16 @@ export default function Showreel() {
         </div>
         <div ref={playerRef} className="showreel__player-wrap">
           <div className="showreel__aspect">
-            {/* Add your showreel video: <video src="/your-showreel.mp4" ... /> */}
-            <div className="showreel__placeholder">
-              <span className="showreel__placeholder-text">Add your showreel video</span>
-              <span className="showreel__placeholder-hint">Drop your MP4 in public/ and set src in Showreel.jsx</span>
-            </div>
+            <video
+              className="showreel__video"
+              src="/Cinematic/catmain.MP4"
+              poster=""
+              playsInline
+              muted
+              loop
+              autoPlay
+              aria-label="Showreel"
+            />
           </div>
         </div>
       </div>
