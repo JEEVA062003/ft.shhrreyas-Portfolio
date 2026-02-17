@@ -79,7 +79,7 @@ export default function About() {
             </div>
             <div ref={contentRef} className="about__content">
               <p ref={leadRef} className="about__lead">
-                I'm Shreyas. The magic I chase is making the visuals breathe — creating cinematic
+                I'm Shreyas. The magic I chase is visuals to breathe — creating cinematic
                 and aesthetic edits that connect.
               </p>
               <p ref={bodyRef} className="about__body">
@@ -87,9 +87,13 @@ export default function About() {
                 I partner with agencies and filmmakers to deliver premium post-production that
                 elevates every frame.
               </p>
-              <p ref={toolsRef} className="about__tools">
-                CapCut · Lightroom · Snapseed · Canva · PicsArt
-              </p>
+              <div ref={toolsRef} className="about__tools">
+                <img src="/Logos/IMG_5864.jpg" alt="CapCut" className="about__tool-logo" />
+                <img src="/Logos/photoshop-lightroom.PNG" alt="Lightroom" className="about__tool-logo" />
+                <img src="/Logos/vecteezy_snapseed-by-google_17396810.PNG" alt="Snapseed" className="about__tool-logo" />
+                <img src="/Logos/IMG_5940.PNG" alt="Canva" className="about__tool-logo" />
+                <img src="/Logos/IMG_5942.jpg" alt="PicsArt" className="about__tool-logo" />
+              </div>
               <img
                 src="/shreyas-banner.png"
                 alt=""

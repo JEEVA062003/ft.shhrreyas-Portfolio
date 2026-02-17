@@ -176,7 +176,7 @@ export default function Hero() {
             <span ref={headingLineRef} className="hero__heading-line" aria-hidden />
           </h1>
           <p ref={subRef} className="hero__sub">
-            The magic I chase is making the visuals breathe — cinematic and aesthetic edits that connect.
+            The magic I chase is visuals to breathe — cinematic and aesthetic edits that connect.
           </p>
           <a
             ref={ctaRef}
