@@ -65,11 +65,11 @@
   }
 }
 
-/* Responsive: extra-large screens (e.g. 1920px+) */
+/* Responsive: 1920×1200 and similar large screens — use more width so layout matches */
 @media (min-width: 1920px) {
   :root {
-    --container-max: 1680px;
-    --section-padding-x: 5rem;
+    --container-max: min(1820px, 94vw);
+    --section-padding-x: clamp(2rem, 2.5vw, 3rem);
     --section-padding-y: clamp(5rem, 5vw, 10rem);
   }
 }
