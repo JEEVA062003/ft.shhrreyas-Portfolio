@@ -15,7 +15,7 @@
 }
 
 .cinematic-header__inner {
-  max-width: 1400px;
+  max-width: var(--container-max);
   margin-inline: auto;
   padding: var(--space-md) var(--section-padding-x);
   display: flex;
@@ -67,7 +67,7 @@
 /* Placeholder width: 280px fits portrait (9:16) so video fills column, no side bars */
 .cinematic-grid {
   --cinematic-card-width: 280px;
-  max-width: 1400px;
+  max-width: var(--container-max);
   margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(3, var(--cinematic-card-width));

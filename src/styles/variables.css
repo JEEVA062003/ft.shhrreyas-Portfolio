@@ -41,3 +41,35 @@
   --duration-m: 0.5s;
   --duration-l: 0.8s;
 }
+
+/* Responsive: tablets and small laptops */
+@media (min-width: 768px) {
+  :root {
+    --section-padding-x: clamp(1.25rem, 3vw, 3rem);
+  }
+}
+
+/* Responsive: standard laptops */
+@media (min-width: 1024px) {
+  :root {
+    --section-padding-x: clamp(1.5rem, 3vw, 4rem);
+  }
+}
+
+/* Responsive: large laptops and desktops */
+@media (min-width: 1440px) {
+  :root {
+    --container-max: 1520px;
+    --section-padding-x: 4rem;
+    --section-padding-y: clamp(4rem, 6vw, 8rem);
+  }
+}
+
+/* Responsive: extra-large screens (e.g. 1920px+) */
+@media (min-width: 1920px) {
+  :root {
+    --container-max: 1680px;
+    --section-padding-x: 5rem;
+    --section-padding-y: clamp(5rem, 5vw, 10rem);
+  }
+}
