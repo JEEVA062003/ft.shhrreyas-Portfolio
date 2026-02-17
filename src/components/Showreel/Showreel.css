@@ -94,7 +94,8 @@
 
 @media (max-width: 768px) {
   .showreel {
-    padding-bottom: var(--space-md);
+    min-height: auto;
+    padding-bottom: var(--space-xs);
   }
 
   .showreel__header {

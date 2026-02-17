@@ -126,7 +126,8 @@
 
 @media (max-width: 768px) {
   .works {
-    padding-top: var(--space-md);
+    min-height: auto;
+    padding-top: var(--space-xs);
   }
 }
 
