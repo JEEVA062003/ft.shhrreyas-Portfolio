@@ -111,54 +111,6 @@
     transform: translateX(0);
   }
 
-  .header__close {
-    position: absolute;
-    top: var(--space-md);
-    right: max(var(--space-lg), env(safe-area-inset-right));
-    width: 44px;
-    height: 44px;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    color: var(--text-primary);
-    cursor: pointer;
-    transition: color var(--duration-s) var(--ease-out-quart),
-      transform var(--duration-s) var(--ease-out-quart);
-  }
-
-  .header__close:hover {
-    color: var(--accent);
-  }
-
-  .header__close-x {
-    position: relative;
-    width: 20px;
-    height: 20px;
-  }
-
-  .header__close-x::before,
-  .header__close-x::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 100%;
-    height: 1.5px;
-    background: currentColor;
-    transition: background var(--duration-s) var(--ease-out-quart);
-  }
-
-  .header__close-x::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-  }
-
-  .header__close-x::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-  }
-
   .header__link {
     font-size: 1rem;
     padding: var(--space-sm) 0;

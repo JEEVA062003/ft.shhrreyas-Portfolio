@@ -32,14 +32,6 @@ export default function Header() {
           ft.shhrreyas
         </a>
         <nav className={`header__nav ${mobileOpen ? 'header__nav--open' : ''}`} aria-hidden={!mobileOpen}>
-          <button
-            type="button"
-            className="header__close"
-            aria-label="Close menu"
-            onClick={() => setMobileOpen(false)}
-          >
-            <span className="header__close-x" aria-hidden />
-          </button>
           {navLinks.map((link) => (
             <a
               key={link.href}
