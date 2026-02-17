@@ -79,8 +79,7 @@ export default function About() {
             </div>
             <div ref={contentRef} className="about__content">
               <p ref={leadRef} className="about__lead">
-                I'm Shreyas. The magic I chase is visuals to breathe — creating cinematic
-                and aesthetic edits that connect.
+                The magic I chase is making the visuals to breathe. I'm Shreyas - creating cinematic and aesthetic edits that connects.
               </p>
               <p ref={bodyRef} className="about__body">
                 With experience across commercials, documentaries, and branded content,

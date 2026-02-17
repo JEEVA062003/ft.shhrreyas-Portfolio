@@ -93,6 +93,10 @@
 }
 
 @media (max-width: 768px) {
+  .showreel {
+    padding-bottom: var(--space-md);
+  }
+
   .showreel__header {
     margin-bottom: var(--space-lg);
   }
